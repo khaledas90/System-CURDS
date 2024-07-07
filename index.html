@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>System Curds</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <h2 class="title">SYSTEM CURDS</h2>
+      <h4 class="discription">CREATE - READE - UPDATE - DELETE - SEARCH</h4>
+    </div>
+
+    <form action="/action_page.php">
+      <input type="text" id="Title" placeholder="Title">
+      <div class="row-one">
+
+        <input type="text" onkeyup="getTotal()" class="price" placeholder="price">
+        <input type="text" onkeyup="getTotal()" class="Taxes" placeholder="Taxes">
+        <input type="text" onkeyup="getTotal()" class="Ads" placeholder="Ads">
+        <input type="text" onkeyup="getTotal()" class="Discount" placeholder="Discount">
+        <h5 class="total">Total:<span class="Total"></span> </h5>
+      </div>
+      <input type="text" id="Count" placeholder="Count">
+      <input type="text" id="Category" placeholder="Category">
+
+    
+      <button type="button" class="CreateBtn CreateProduct">Create</button>
+      <input type="text" id="Search" onkeyup="SearchData(this.value)" name="Search" placeholder="Search">
+      <div class="row-two">
+        <input type="button" onclick="SearchMood(this.id)" id="SearchT" class="CreateBtn" value="Search By Title">
+        <input type="button" onclick="SearchMood(this.id)" id="SearchC" class="CreateBtn" value="Search By Category">
+        
+      </div>
+      <input type="button" id="DeleteAll" class="CreateBtn" value="Delete All">
+    </form>
+    <div class="table-main">
+
+      <div class="card">
+      </div>
+      <div class="table-concept">
+        <input class="table-radio" type="radio" name="table_radio" id="table_radio_0" checked="checked" />
+        <div class="table-display">
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Total</th>
+              <th>Category</th>
+              <th >Other</th>
+            </tr>
+          </thead>
+          <tbody class="TBTable">
+            
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
